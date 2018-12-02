@@ -179,7 +179,12 @@ export class SessionService {
     }
   }
 
-  getToken(): TokenPayloadModel {
+  /**
+   * Get the current decoded token
+   *
+   * @returns the the current user's decoded token or null
+   */
+  getToken(): TokenPayloadModel | null {
     if (this.isAuthenticated()) {
       // user is authenticated (valid token found)
       return this.token;

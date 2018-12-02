@@ -1,4 +1,3 @@
-import { TokenPayloadModel } from './models/token-payload-model';
 // Angular modules
 import {
     HttpClient,
@@ -7,13 +6,14 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 // App
 import { ApiurlService } from './apiurl.service';
-import { SessionService } from './session.service';
-import { CourseModel } from './models/course-model';
 import { ApplicationRole } from './models/application-role.enum';
+import { CourseModel } from './models/course-model';
+import { SessionService } from './session.service';
+import { TokenPayloadModel } from './models/token-payload-model';
 
 @Injectable({
     providedIn: 'root'
